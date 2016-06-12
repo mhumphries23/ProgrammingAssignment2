@@ -25,10 +25,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Calculate inverse of vector created above if it has not already been calculated, otherwise return value from cache
+## Calculate inverse of matrix created above if it has not already been calculated, otherwise return value from cache
 
 cacheSolve <- function(x=matrix(), ...) {
   inv<-x$getinv()
+  ##if inv exists
   if(!is.null(inv))
     {
     # Get from cache
